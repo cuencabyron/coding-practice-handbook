@@ -63,7 +63,15 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_2
+	Definir Num Como Entero
+	Num <- 700;
+	Escribir "---PROGRAMA QUE CALCULA LOS NUMEROS DEL 700 AL 0, DE 7 EN 7---";
+	Mientras (Num >= 0) Hacer
+		Escribir Num;
+		Num <- Num - 7;
+	FinMientras
+FinAlgoritmo
 ```
 </details>
 
@@ -71,6 +79,24 @@ int main()
 <summary>C++</summary>
 
 ```c++
+#include<iostream>
+using namespace std;
+void DecrementarNumeros()
+{
+	int num = 700;
+	cout<<"\t---PROGRAMA QUE CALCULA LOS NUMEROS DEL 700 AL 0, DE 7 EN 7---"<<endl;
+	do
+	{
+		cout<<"\n"<<num;
+		num -=  7;
+	}while(num >= 0);	
+}
+int main()
+{
+	system("color 0A");
+	DecrementarNumeros();
+	return 0;
+}
 
 ```
 </details>
@@ -80,7 +106,23 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_3
+	Definir x, myr, num Como Entero
+	x <- 1;
+	myr <- 0;
+	num <- 0;
+	Escribir "---PROGRAMA QUE CALCULA EL NUMERO MAYOR INGRESADO---";
+	Mientras (x <= 10) Hacer
+		Escribir "Ingrese el número ",x,": ";
+		Leer num;
+		Si (num > myr) Entonces
+			myr <- num;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El numero mayor ingresado es: ",myr;
+FinAlgoritmo
 ```
 </details>
 
@@ -88,7 +130,30 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void MayorIngresado()
+{
+	int x = 1, myr = 0, num = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL NUMERO MAYOR INGRESADO---"<<endl;
+	do
+	{
+		cout<<"Ingrese el numero "<<x<<": ";
+		cin>>num;
+		if(num > myr)
+		myr = num;
+		x += 1;
+	}while(x <= 10);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"EL NUMERO MAYOR INGRESADO ES: "<<myr;
+}
+int main()
+{
+	system("color 0A");
+	MayorIngresado();
+	return 0;
+}
 ```
 </details>
 
@@ -98,7 +163,26 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_4
+	Definir x, mnr, num Como Entero
+	x <- 1;
+	mnr <- 0;
+	num <- 0;
+	Escribir "---PROGRAMA QUE CALCULA EL NUMERO MENOR INGRESADO---";
+	Mientras (x <= 10) Hacer
+		Escribir "Ingrese el n�mero ",x,": ";
+		Leer num;
+		Si (x == 1) Entonces
+			mnr <- num;
+		FinSi
+		Si (num < mnr) Entonces
+			mnr <- num;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El número menor ingresado es: ",mnr;
+FinAlgoritmo
 ```
 </details>
 
@@ -106,7 +190,32 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void MenorIngresado()
+{
+	int x = 1, mnr = 0, num = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL NUMERO MENOR INGRESADO---"<<endl;
+	do
+	{
+		cout<<"Ingrese el numero "<<x<<": ";
+		cin>>num;
+		if(x == 1)
+		mnr = num;
+		if(num < mnr)
+		mnr = num;
+		x += 1;
+	}while(x <= 10);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"EL NUMERO MENOR INGRESADO ES: "<<mnr;
+}
+int main()
+{
+	system("color 0A");
+	MenorIngresado();
+	return 0;
+}
 ```
 </details>
 
@@ -115,7 +224,19 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_5
+	Definir num, suma Como Entero
+	num <- 0;
+	suma <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA SUMA DE N NUMEROS---";
+	Mientras (num <> 7) Hacer
+		Escribir "Ingrese un numero: ";
+		Leer num; 
+		suma <- suma + num; 
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El resultado por la suma de N numeros es de: ",suma;
+FinAlgoritmo
 ```
 </details>
 
@@ -123,7 +244,28 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void SumaNnumeros()
+{
+	int num = 0, suma = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA SUMA DE N NUMEROS---"<<endl;
+	do
+	{
+		cout<<"Ingrese un numero: ";
+		cin>>num;
+		suma += num;
+	}while(num != 7);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"LA SUMA DE N NUMEROS ES: "<<suma;	
+}
+int main()
+{
+	system("color 0A");
+	SumaNnumeros();
+	return 0;
+}
 ```
 </details>
 
@@ -132,7 +274,25 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_6
+	Definir num, pares, impares Como Entero
+	num <- 1;
+	pares <- 0;
+	impares <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA SUMA DE LOS NUMEROS PARES E IMPARES---";
+	Mientras (num <> 0) Hacer
+		Escribir "Ingrese un número: "
+		Leer num;
+		Si (num % 2 == 0) Entonces
+			pares <- num + pares;
+		SiNo
+			impares <- num + impares;
+		FinSi
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "La suma de los pares es: ",pares;
+	Escribir "La suma de los impares es: ",impares;
+FinAlgoritmo
 ```
 </details>
 
@@ -140,7 +300,32 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void SumaParesImpares()
+{
+	int num = 1, pares = 0, impares = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA SUMA DE LOS NUMEROS PARES E IMPARES---"<<endl;
+	do
+	{
+		cout<<"Ingrese un numero: ";
+		cin>>num;
+		if(num % 2 == 0)
+		pares += num;
+		else
+		impares += num;
+	}while(num != 0);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"SUMA DE LOS PARES: "<<pares<<endl;
+	cout<<"SUMA DE LOS IMPARES: "<<impares<<endl;	
+}
+int main()
+{
+	system("color 0A");
+	SumaParesImpares();
+	return 0;
+}
 ```
 </details>
 
@@ -149,7 +334,23 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_7
+	Definir x, num, total Como Entero
+	x <- 1;
+	num <- 0;
+	total <- 0;
+	Escribir "---PROGRAMA QUE CALCULA CUANTOS NUMEROS 5 FUERON INGRESADOS---";
+	Mientras (x <= 10) Hacer
+		Escribir "Ingrese el número ",x,": ";
+		Leer num; 
+		Si (num == 5) Entonces
+			total <- total + 1;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El total de números 5 ingresados fue de: ",total;
+FinAlgoritmo
 ```
 </details>
 
@@ -157,7 +358,30 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void Numeros5()
+{
+	int x = 1, num = 0, total = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA CUANTOS NUMEROS 5 FUERON INGRESADOS---"<<endl;
+	do
+	{
+		cout<<"Ingrese el numero "<<x<<": ";
+		cin>>num;
+		if(num == 5)
+		total += 1;
+		x += 1;
+	}while(x <= 10);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"EL TOTAL DE NUMEROS 5 INGRESADOS FUE DE: "<<total;
+}
+int main()
+{
+	system("color 0A");
+	Numeros5();
+	return 0;
+}
 ```
 </details>
 
@@ -166,7 +390,23 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_8
+	Definir x, num, suma Como Entero 
+	x <- 1;
+	num <- 0;
+	suma <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA SUMA DE LOS NUMEROS MAYORES A 5 Y MENORES A 50---";
+	Mientras (x <= 10) Hacer
+		Escribir "Ingrese el numero ",x,": ";
+		Leer num;
+		Si (num >= 5 y num <= 50) Entonces
+			suma <- suma + num;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "La suma de los numeros mayores a 5 y menores a 50 es: ",suma;
+FinAlgoritmo
 ```
 </details>
 
@@ -174,6 +414,30 @@ int main()
 <summary>C++</summary>
 
 ```c++
+#include<iostream>
+using namespace std;
+void SumaMyr5Mnr50()
+{
+	int x = 1, num = 0, suma = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA SUMA DE LOS NUMEROS MAYORES A 5 Y MENORES A 50---"<<endl;
+	do
+	{
+		cout<<"Ingrese el numero "<<x<<": ";
+		cin>>num;
+		if(num >= 5 && num <= 50)
+		suma += num;
+		x += 1;
+	}while(x <= 10);
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"LA SUMA DE LOS NUMEROS MAYORES A 5 Y MENORES A 50 ES: "<<suma;	
+}
+int main()
+{
+	system("color 0A");
+	SumaMyr5Mnr50();
+	return 0;
+}
 
 ```
 </details>
@@ -183,7 +447,24 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_9
+	Definir costo,total,productos Como Entero
+	costo <- 1;
+	total <- 0;
+	productos <- 0;
+	Escribir "---PROGRAMA QUE CALCULA EL COSTO DE N PRODUCTOS---";
+	Mientras (costo <> 0) Hacer
+		Escribir "Ingresa el costo del producto: ";
+		Leer costo;
+		Si (costo <> 0) Entonces
+			total <- total + costo;
+			productos <- productos + 1;
+		FinSi
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El total a pagar es de: $",total;
+	Escribir "El total de productos comprados es de: ",productos;
+FinAlgoritmo
 ```
 </details>
 
@@ -191,7 +472,33 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void ProductosCliente()
+{
+	int costo = 1, total = 0, prdcts = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA EL COSTO DE N PRODUCTOS---"<<endl;
+	while(costo != 0)
+	{
+		cout<<"Ingrese el costo de producto: ";
+		cin>>costo;
+		if(costo != 0)
+		{
+			total += costo;
+		    prdcts += 1;
+		}
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"EL TOTAL A PAGAR ES DE: $"<<total<<endl;
+	cout<<"TOTAL DE PRODUCTOS COMPRADOS: "<<prdcts;	
+}
+int main()
+{
+	system("color 0A");
+	ProductosCliente();
+	return 0;
+}
 ```
 </details>
 
@@ -200,7 +507,25 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_10
+	Definir x, clts, ctv, mt Como Entero
+	x <- 1;
+	clts <- 0;
+	ctv <- 0;
+	mt <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA CANTIDAD TOTAL DE VENTAS Y LOS CLIENTES ATENDIDOS---";
+	Escribir "Ingrese la cantidad de clientes: ";
+	Leer clts;
+	Mientras (x <= clts) Hacer
+		Escribir "Ingrese el monto total del cliente: ";
+		Leer mt;
+		ctv <- ctv + mt;
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "La cantidad total de las ventas es de: $",ctv;
+	Escribir "El número de clientes atendidos es de: ",clts;
+FinAlgoritmo
 ```
 </details>
 
@@ -208,7 +533,31 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void ClientesAtendidos()
+{
+	int clts = 0, ctv = 0, mt = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA LA CANTIDAD TOTAL DE VENTAS Y LOS CLIENTES ATENDIDOS---"<<endl;
+	cout<<"Ingrese la cantidad de clientes: ";
+	cin>>clts;
+	for(int x = 1; x <= clts; x++)
+	{
+		cout<<"Ingrese el monto total del cliente "<<x<<": $";
+		cin>>mt;
+		ctv += mt;
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"CANTIDAD TOTAL DE LAS VENTAS: $"<<ctv<<endl;	
+	cout<<"CLIENTES ATENDIDOS: "<<clts;
+}
+int main()
+{
+	system("color 0A");
+	ClientesAtendidos();
+	return 0;
+}
 ```
 </details>
 
@@ -217,7 +566,36 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_11
+	Definir x, numper, infantes, jovenes, adultos, edad Como Entero
+	x <- 1;
+	numper <- 0;
+	infantes <- 0;
+	jovenes <- 0;
+	adultos <- 0;
+	edad <- 0;
+	Escribir "---PROGRAMA QUE CALCULA CUANTAS PERSONAS HAY DE DIEFRENTES EDADES---";
+	Escribir "Ingrese la cantidad de personas que va a registrar: ";
+	Leer numper;
+	Mientras (x <= numper) Hacer
+		Escribir "Ingrese una edad: ";
+		Leer edad;
+		Si (edad >= 0 y edad <= 13) Entonces
+			infantes <- infantes + 1;
+		FinSi
+		Si (edad >= 14 y edad <= 29) Entonces
+			jovenes <- jovenes + 1;
+		FinSi
+		Si (edad >= 30) Entonces
+			adultos <- adultos + 1;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El total de infantes fueron: ",infantes;
+	Escribir "El total de jovenes fueron: ",jovenes;
+	Escribir "El total de adultos fueron: ",adultos;
+FinAlgoritmo
 ```
 </details>
 
@@ -225,7 +603,39 @@ int main()
 <summary>C++</summary>
 
 ```c++
-
+#include<iostream>
+using namespace std;
+void EdadPersonas()
+{
+	int x = 1, numper = 0, infantes = 0, jovenes = 0, adultos = 0, edad = 0;
+	cout<<"\t---PROGRAMA QUE CALCULA CUANTAS PERSONAS HAY DE DIEFRENTES EDADES---"<<endl;
+	cout<<"Personas a registrar: ";
+	cin>>numper;
+	while(x <= numper)
+	{
+		cout<<"Ingrese la edad "<<x<<": ";
+		cin>>edad;
+		if(edad >= 0 && edad <= 13)
+		infantes += 1;
+		if(edad >= 14 && edad <= 29)
+		jovenes += 1;
+		if(edad >= 30)
+		adultos += 1;
+		
+		x += 1;
+	}
+	system("cls");
+	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
+	cout<<"TOTAL DE INFANTES FUERON: "<<infantes<<endl;
+	cout<<"TOTAL DE JOVENES FUERON: "<<jovenes<<endl;
+	cout<<"TOTAL DE ADULTOS FUERON: "<<adultos<<endl;
+}
+int main()
+{
+	system("color 0A");
+	EdadPersonas();
+	return 0;
+}
 ```
 </details>
 
@@ -234,7 +644,55 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_12
+	Definir x, numcal, calif, suma, baja, alta, conAprob, conReprob Como Entero
+	Definir prom, aprob, reprob Como Real;
+	x <- 1;
+	numcal <- 0;
+	calif <- 0;
+	suma <- 0;
+	baja <- 10; 
+	alta <- 0;
+	conAprob <- 0;
+	conReprob <- 0;
+	aprob <- 0;
+	reprob <- 0;
+	prom <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA CALIFICACI�N BAJA Y ALTA LOS APROBADOS Y REPROBADOS---";
+	Escribir "Ingrese las calificaciones que va a registrar: ";
+	Leer numcal;
+	Mientras (x <= numcal) Hacer
+		Escribir "Ingrese la califcaci�n ",x,": ";
+		Leer calif;
+		Si (calif >= 0 y calif <= 10) Entonces
+			x <- x + 1;
+			suma <- suma + calif;
+		    Si (calif > alta) Entonces
+				alta <- calif;
+			FinSi
+			Si (calif < baja) Entonces
+				baja <- calif;
+			FinSi
+			Si (calif >= 6) Entonces
+				conAprob <- conAprob + 1;
+			FinSi
+			Si (calif <= 6) Entonces
+				conReprob <- conReprob + 1;
+			FinSi
+		SiNo
+			Escribir "La calificaci�n que ingresaste debe estar entre 0 y 10";
+		FinSi
+	FinMientras;
+	prom <- suma / (x - 1);
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El promedio es: ",prom;
+	Escribir "La calificaci�n alta fue: ",alta;
+	Escribir "La calificaci�n baja fue: ",baja;
+	aprob <- conAprob * 100 / (conAprob + conReprob);
+	reprob <- conReprob * 100 / (conAprob + conReprob);
+	Escribir "El porcentaje de aprobados es de: ",aprob,"%";
+	Escribir "El porcentaje de reprobados es de: ",reprob,"%";
+FinAlgoritmo
 ```
 </details>
 
@@ -251,7 +709,39 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_13
+	Definir x,numpers,sexo,hombres,mujeres Como Entero
+	x <- 1;
+	numpers <- 0;
+	sexo <- 0;
+	hombres <- 0;
+	mujeres <- 0;
+	Escribir "---PROGRAMA QUE CALCULA CUANTOS HOMBRES Y MUJERES HAY EN GRUPO DE N PERSONAS---";
+	Escribir "Ingrese el número de personas: ";
+	Leer numpers;
+	Mientras (x <= numpers) Hacer
+		Escribir "Persona ",x,": ";
+		Escribir "Eliga un número de acuerdo a tu sexo: ";
+		Escribir "1 = HOMBRE";
+		Escribir "2 = MUJER";
+		Leer sexo;
+		Si (sexo == 1) Entonces
+			hombres <- hombres + 1;
+		SiNo
+			Si (sexo == 2) Entonces
+				mujeres <- mujeres + 1;
+			SiNo
+				Escribir "!!!NO SE ENCONTRO EL NúMERO INGRESADO!!!";
+				Escribir "INGRESE UN NúMERO EN EL RANGO CORRECTO";
+				x <- x - 1;
+			FinSi
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "La cantidad de hombres que hay en el grupo es de: ",hombres;
+	Escribir "La cantidad de mujeres que hay en el grupo es de: ",mujeres;
+FinAlgoritmo
 ```
 </details>
 
@@ -268,7 +758,32 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_14
+	Definir x, n Como Entero
+	Definir sueldo, comision, venta1, venta2, venta3 Como Real
+	x <- 1;
+	n <- 0;
+	sueldo <- 0;
+	comision <- 0;
+	venta1 <- 0;
+	venta2 <- 0;
+	venta3 <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA CANTIDAD DE DINERO OBTENIDAD DE TRES VENTAS REALIZADAS---";
+	Escribir "Ingrese la cantidad de trabajadores en la compañia: ";
+	Leer n;
+	Mientras (x <= n) Hacer
+		Escribir "Ingrese el sueldo base del trabajador: ";
+		Leer sueldo;
+		Escribir "Ingrese las ventas del mes: ";
+		Leer venta1,venta2,venta3;
+		comision <- (venta1+venta2+venta3) * 0.15;
+		Escribir "------RESULTADOS OBTENIDOS------";
+		Escribir "El sueldo mensual es de: $",sueldo;
+		Escribir "La comisión del mes es de: $",comision;
+		Escribir "El suelso total con la comisión incluida es de: $",sueldo + comision;
+		x <- x + 1;
+	FinMientras
+FinAlgoritmo
 ```
 </details>
 
@@ -285,7 +800,28 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_15
+	Definir x, numcal Como Entero
+	Definir calif, suma, prom Como Real
+	x <- 1;
+	numcal <- 0;
+	calif <- 0;
+	suma <- 0;
+	prom <- 0;
+	Escribir "---PROGRAMA QUE CALCULA EL PROMEDIO DE CALIFICACIONES DE UN GRUPO DE N PERSONAS---";
+	Escribir "Ingresa la cantidad de alumnos: ";
+	Leer numcal;
+	Mientras (x <= numcal) Hacer
+		Escribir "Ingrese la califcación ",x,": ";
+		Leer calif;
+		suma <- suma + calif;
+		prom <- suma / numcal;
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El promedio del grupo es de: ",prom;
+	Escribir "La suma de ",numcal," calificaciones ingresadas del grupo es de: ",suma;
+FinAlgoritmo
 ```
 </details>
 
@@ -302,7 +838,28 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_16
+	Definir x, aprobados, reprobados Como Entero
+	Definir calif Como Real
+	x <- 1;
+	calif <- 0;
+	aprobados <- 0;
+	reprobados <- 0;
+	Escribir "---PROGRAMA QUE CALCULA EL PORCENTAJE DE APROBADOS Y REPROBADOS---";
+	Mientras (x <= 10) Hacer
+		Escribir "Ingresa la calificacion ",x,": ";
+		Leer calif;
+		si (calif <= 6) Entonces
+			reprobados <- reprobados + 1;
+		SiNo
+			aprobados <- aprobados + 1;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El total de alumnos aprobados es: ",aprobados;
+	Escribir "El total de alumnos reprobados es: ",reprobados;
+FinAlgoritmo
 ```
 </details>
 
@@ -320,7 +877,39 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_17
+	Definir x, num, myr, mnr, suma Como Entero
+	Definir prommyr, prommnr Como Real	
+	x <- 1;
+	num <- 0;
+	suma <- 0;
+	prommyr <- 0;
+	myr <- 0;
+	prommnr <- 0;
+	mnr <- 0;
+	Escribir "---PROGRAMA QUE CALCULA EL PROMEDIO DEL VALOR MENOR Y MAYOR DE UN CONJUNTO DE NUMEROS---";
+	Mientras  (x <= 15) Hacer
+		Escribir "Ingrese el número ",x,": ";
+		Leer num;
+		Si (x == 1) Entonces
+			myr <- num;
+			mnr <- num;
+		SiNo
+			Si (num > myr) Entonces
+				myr <- myr + num;
+			FinSi
+			Si (num < mnr) Entonces
+				mnr <- mnr + num;
+			FinSi
+		FinSi
+		x <- x + 1;
+	FinMientras
+	prommyr <- myr / 15;
+	prommnr <- mnr / 15;
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El promedio mayor del conjunto de 15 numeros ingresados es: ",prommyr;
+	Escribir "El promedio menor del conjunto de 15 numeros ingresados es: ",prommnr;
+FinAlgoritmo
 ```
 </details>
 
@@ -337,7 +926,37 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_18
+	Definir x,numpers,sexo,hombres,mujeres Como Entero
+	x <- 1;
+	numpers <- 0;
+	sexo <- 0;
+	hombres <- 0;
+	mujeres <- 0;
+	Escribir "---PROGRAMA QUE CALCULA CUANTOS HOMBRES Y MUJERES HAY EN GRUPO DE 25 PERSONAS---";
+	Mientras (x <= 25) Hacer
+		Escribir "Persona ",x,": ";
+		Escribir "Eliga un numero de acuerdo a tu sexo: ";
+		Escribir "1 = HOMBRE";
+		Escribir "2 = MUJER";
+		Leer sexo;
+		Si (sexo == 1) Entonces
+			hombres <- hombres + 1;
+		SiNo
+			Si (sexo == 2) Entonces
+				mujeres <- mujeres + 1;
+			SiNo
+				Escribir "!!!NO SE ENCONTRO EL NUMERO INGRESADO!!!";
+				Escribir "INGRESE UN NUMERO EN EL RANGO CORRECTO";
+				x <- x - 1;
+			FinSi
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "La cantidad de hombres que hay en el grupo es de: ",hombres;
+	Escribir "La cantidad de mujeres que hay en el grupo es de: ",mujeres;
+FinAlgoritmo
 ```
 </details>
 
@@ -360,7 +979,53 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_19
+	Definir x Como Entero
+	Definir numautos, autsamarillo, autsrosa, autsrojo, autsverde, autsazul, autcolor Como Real
+	x <- 1;
+	numautos <- 0;
+	autsamarillo <- 0;
+	autsrosa <- 0;
+	autsrojo <- 0;
+	autsverde <- 0;
+	autsazul <- 0;
+	autcolor <- 0;
+	Escribir "---PROGRAMA QUE CALCULA LA CANTIDAD DE AUTOS QUE HAY SEGUN SU PLACA---";
+	Escribir "Ingrese el n�mero de autos a registrar: ";
+	Leer numautos;
+	Mientras (x <= numautos) Hacer
+		Escribir "!!!DE ACUERDO A LA SIGUIENTE LISTA CON EL ULTIMO DIGITO DE SU PLACA SE PUEDE DETERMINAR EL COLOR!!!";
+		Escribir "1 ó 2 -> Amarillo";
+		Escribir "3 ó 4 -> Rosa";
+		Escribir "5 ó 6 -> Roja";
+		Escribir "7 ó 8 -> Verde";
+		Escribir "9 ó 0 -> Azul";
+		Escribir "Ingrese el ultimo número de acuerdo a su placa: ";
+		Leer autcolor;
+		Si (autcolor == 1 o autcolor == 2) Entonces
+			autsamarillo <- autsamarillo + 1;
+		FinSi
+		Si (autcolor == 3 o autcolor == 4) Entonces
+			autsrosa <- autsrosa + 1;
+		FinSi
+		Si (autcolor == 5 o autcolor == 6) Entonces
+			autsrojo <- autsrojo + 1;
+		FinSi
+		Si (autcolor == 7 o autcolor == 8) Entonces
+			autsverde <- autsverde + 1;
+		FinSi
+		Si (autcolor == 9 o autcolor == 0) Entonces
+			autsazul <- autsazul + 1;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "El total de automóviles con calcomanía amarilla es de: ",autsamarillo;
+	Escribir "El total de automóviles con calcomanía rosa es de: ",autsrosa;
+	Escribir "El total de automóviles con calcomanía roja es de: ",autsrojo;
+	Escribir "El total de automóviles con calcomanía verde es de: ",autsverde;
+	Escribir "El total de automóviles con calcomanía azul es de: ",autsazul;
+FinAlgoritmo
 ```
 </details>
 
@@ -377,7 +1042,41 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Algoritmo EJERCICIO_20
+	Definir x, hrstrab, hrsextras, hrstriple, numobr Como Entero
+	Definir pagohrs, sueldo Como Real
+	x <- 1;
+	hrstrab <- 0;
+	hrsextras <- 0;
+	hrstriple <- 0;
+	numobr <- 0;
+	pagohrs <- 0;
+	sueldo <- 0;
+	Escribir "------PROGRAMA QUE CALCULA LA CANTIDAD SEMANAL DE DINERO------";
+	Escribir "Ingrese la cantidad de obreros: ";
+	Leer numobr;
+	Mientras (x <= numobr) Hacer
+		Escribir "Obrero ",x,": ";
+		Escribir "Ingrese sus horas trabajadas: ";
+		Leer hrstrab;
+		Escribir "Ingrese el pago por hora: ";
+		Leer pagohrs;
+		Si (hrstrab > 40) Entonces
+			hrsextras <- hrstrab - 40;
+			Si (hrsextras > 8) Entonces
+				hrstriple <- hrsextras - 8;
+				sueldo <- (40 * pagohrs) + (8 * pagohrs * 2) + (hrstriple * pagohrs * 3);
+			SiNo
+				sueldo <- (40 * pagohrs) + (hrsextras * pagohrs * 2);
+			FinSi
+		SiNo
+			sueldo <- hrstrab * pagohrs;
+		FinSi
+		x <- x + 1;
+	FinMientras
+	Escribir "------RESULTADOS OBTENIDOS------";
+	Escribir "La cantidad semanal de dinero que recibiran ",numobr," obreros por las horas trabajadas es de: $",sueldo; 
+FinAlgoritmo
 ```
 </details>
 
@@ -394,7 +1093,44 @@ int main()
 <summary>Pseudocódigo</summary>
 
 ```
-
+Proceso EJERCICIO_21
+	Definir x, edad Como Entero
+	Definir peso, prominfan, promjoven, promadul, promviejos Como Real
+	x <- 1;
+	edad <- 0;
+	peso <- 0;
+	prominfan <- 0;
+	promjoven <- 0;
+	promadul <- 0;
+	promviejos <- 0;
+	Para x <- 1 Hasta 10 Con Paso 1 Hacer
+		Escribir "Persona ",x,": ";
+		Escribir "Ingresa su edad: ";
+		Leer edad;
+		Escribir "Ingresa su peso: ";
+		Leer peso;
+		Si (edad >= 0 y edad <= 12) Entonces
+			prominfan <- prominfan + peso;
+		FinSi
+		Si (edad >= 13 y edad <= 29) Entonces
+			promjoven <- promjoven + peso;
+		FinSi
+		Si (edad >= 30 y edad <= 59) Entonces
+			promadul <- promadul + peso;
+		FinSi
+		Si (edad >= 60) Entonces
+			promviejos <- promviejos + peso;
+		FinSi
+	FinPara
+	prominfan <- 100.0 * (prominfan / 10);
+	promjoven <- 100.0 * (promjoven / 10);
+	promadul <- 100.0 * (promadul / 10);
+	promviejos <- 100.0 * (promviejos / 10);
+	Escribir "El promedio de los adultos: ", promadul;
+	Escribir "El promedio de los jovenes: ", promjoven;
+	Escribir "El promedio de los infantes: ", prominfan;
+	Escribir "El promedio de los adultos mayores: ", promviejos;
+FinProceso
 ```
 </details>
 
