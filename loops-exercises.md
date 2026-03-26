@@ -7,54 +7,15 @@
 <summary>Pseudocódigo</summary>
 
 ```
-Algoritmo EJERCICIO_1
-	Definir Num, x, ResSuma, ResDoble Como Entero
-	Num <- 0;
-	x <- 1;
-	ResSuma <- 0;
-	ResDoble <- 0;
-	Escribir "---PROGRAMA QUE CALCULA EL DOBLE DE LA SUMA DE 10 NUMEROS INGRESADOS CON CICLO MIENTRAS---";
-	Mientras (x <= 10) Hacer
-		Escribir "Ingrese el n�mero ",x,": ";
-		Leer Num;
-		ResSuma <- ResSuma + Num;
-		ResDoble <- ResSuma * 2;
-		x <- x + 1;
-	FinMientras
-	Escribir "------RESULTADOS OBTENIDOS------";
-	Escribir "El resultado de la suma por los 10 n�meros ingresados es de: ",ResDoble;
-FinAlgoritmo
+
 ```
 </details>
 
 <details>
 <summary>C++</summary>
 
-```c++
-#include<iostream>
-using namespace std;
-void DobleSuma()
-{
-	cout<<"\t---PROGRAMA QUE CALCULA EL DOBLE DE LA SUMA DE 10 NUMEROS INGRESADOS CON CICLO DO - WHILE---"<<endl;
-	int num = 0, x = 1, ResSuma = 0, ResDoble = 0;
-	do
-	{
-		cout<<"Ingrese el numero "<<x<<": ";
-		cin>>num;
-		ResSuma += num;
-		ResDoble = ResSuma * 2;
-		x += 1;
-	}while(x <= 10);
-	system("cls");
-	cout<<"\t---RESULTADOS OBTENIDOS---"<<endl;
-	cout<<"EL DOBLE DE LA SUMA ES: "<<ResDoble;
-}
-int main()
-{
-	system("color 0A");
-	DobleSuma();
-	return 0;
-}
+```C++
+
 ```
 </details>
 
