@@ -770,19 +770,19 @@ print("Total:", total)
 
 ```
 Algoritmo InteresMeses
-    Definir capital, interes, total Como Real
-    Definir meses Como Entero
+    Definir capital, interes, total Como Real;
+    Definir meses Como Entero;
 
-    Escribir "Ingresa capital: "
-    Leer capital
-    Escribir "Ingresa meses: "
-    Leer meses
+    Escribir "Ingresa capital: ";
+    Leer capital;
+    Escribir "Ingresa meses: ";
+    Leer meses;
 
-    interes <- capital * 0.02 * meses
-    total <- capital + interes
+    interes <- capital * 0.02 * meses;
+    total <- capital + interes;
 
-    Escribir "Interes:", interes
-    Escribir "Total:", total
+    Escribir "Interes:", interes;
+    Escribir "Total:", total;
 FinAlgoritmo
 ```
 </details>
@@ -834,8 +834,8 @@ print("Total:", total)
 <summary>Pseudocódigo</summary>
 
 ```
-Algoritmo IVA
-    Definir precio_prdct, pago_prdctiva, cambio, iva, monto_iva Como Real
+Algoritmo TiendaIva
+    Definir precio_prdct, pago_prdctiva, cambio, iva, monto_iva Como Real;
 
     Escribir "Ingresa precio: ";
     Leer precio_prdct;
@@ -844,10 +844,10 @@ Algoritmo IVA
 
     iva <- precio_prdct * 0.16;
     monto_iva <- precio_prdct + iva;
-    cambio = precio_prdct - pago_prdct;
+    cambio <- precio_prdct - pago_prdct;
 
-    Escribir "El iva a pagar es de: $",iva;
-	Escribir "El total a pagar ya con el iva incluido es de: $",monto_iva;
+    Escribir "El iva a pagar es de: $", iva;
+	Escribir "El total a pagar ya con el iva incluido es de: $", monto_iva;
 	Escribir "Su cambio es de: $", cambio;
 FinAlgoritmo
 ```
@@ -861,16 +861,20 @@ FinAlgoritmo
 using namespace std;
 
 int main() {
-    float precio, iva, total;
+    float precio, iva, total;precio_prdct, pago_prdctiva, cambio, iva, monto_iva;
 
     cout << "Ingresa precio: ";
-    cin >> precio;
+    cin >> precio_prdct;
+    cout << "Ingrese el pago: ";
+    cin >> pago_prdct;
 
-    iva = precio * 0.16;
-    total = precio + iva;
+    iva = precio_prdct * 0.16;
+    monto_iva = precio_prdct + iva;
+    cambio = precio_prdct - pago_prdct;
 
     cout << "IVA: $" << iva << endl;
-    cout << "Total: $" << total;
+    cout << "El total a pagar ya con el iva incluido es de: $" << monto_iva;
+    cout << "Cambio: $" << cambio;
 
     return 0;
 }
@@ -881,13 +885,16 @@ int main() {
 <summary>Python</summary>
 
 ```Python
-precio = float(input("Ingresa precio: "))
+precio_prdct = float(input("Ingresa precio: "))
+pago_prdct = float(input("Ingresa pago: "))
 
-iva = precio * 0.16
-total = precio + iva
+iva = precio_prdct * 0.16
+monto_iva = precio_prdct + iva
+cambio = precio_prdct - pago_prdct
 
 print("IVA:", iva)
-print("Total:", total)
+print("El total a pagar ya con el iva incluido es de: $", monto_iva)
+print("Cambio: $:", cambio)
 ```
 </details>
 
@@ -921,21 +928,7 @@ print("Total:", total)
 <summary>Pseudocódigo</summary>
 
 ```
-Algoritmo Inversiones
-    Definir i1, i2, i3, total Como Real
-    Definir p1, p2, p3 Como Real
 
-    Escribir "Ingresa inversiones: "
-    Leer i1, i2, i3
-
-    total <- i1 + i2 + i3
-
-    p1 <- (i1 * 100) / total
-    p2 <- (i2 * 100) / total
-    p3 <- (i3 * 100) / total
-
-    Escribir p1, p2, p3
-FinAlgoritmo
 ```
 </details>
 
@@ -943,23 +936,7 @@ FinAlgoritmo
 <summary>C++</summary>
 
 ```C++
-#include<iostream>
-using namespace std;
 
-int main() {
-    float i1, i2, i3, total;
-
-    cout << "Ingresa inversiones: ";
-    cin >> i1 >> i2 >> i3;
-
-    total = i1 + i2 + i3;
-
-    cout << "Porcentaje 1: " << (i1*100)/total << endl;
-    cout << "Porcentaje 2: " << (i2*100)/total << endl;
-    cout << "Porcentaje 3: " << (i3*100)/total;
-
-    return 0;
-}
 ```
 </details>
 
@@ -967,15 +944,7 @@ int main() {
 <summary>Python</summary>
 
 ```Python
-i1 = float(input("Inversion 1: "))
-i2 = float(input("Inversion 2: "))
-i3 = float(input("Inversion 3: "))
 
-total = i1 + i2 + i3
-
-print("Porcentaje 1:", (i1*100)/total)
-print("Porcentaje 2:", (i2*100)/total)
-print("Porcentaje 3:", (i3*100)/total)
 ```
 </details>
 
@@ -985,21 +954,21 @@ print("Porcentaje 3:", (i3*100)/total)
 
 ```
 Algoritmo Grupo
-    Definir hombres, mujeres, total Como Entero
-    Definir ph, pm Como Real
+    Definir hombres, mujeres, total Como Entero;
+    Definir ph, pm Como Real;
 
-    Escribir "Ingrese numero de hombres:"
-    Leer hombres
-    Escribir "Ingrese numero de mujeres:"
-    Leer mujeres
+    Escribir "Ingresa numero de hombres: ";
+    Leer hombres;
+    Escribir "Ingresa numero de mujeres: ";
+    Leer mujeres;
 
-    total <- hombres + mujeres
+    total <- hombres + mujeres;
 
-    ph <- (hombres * 100) / total
-    pm <- (mujeres * 100) / total
+    ph <- (hombres * 100) / total;
+    pm <- (mujeres * 100) / total;
 
-    Escribir "% Hombres:", ph
-    Escribir "% Mujeres:", pm
+    Escribir "% Hombres:", ph;
+    Escribir "% Mujeres:", pm;
 FinAlgoritmo
 ```
 </details>
@@ -1055,19 +1024,20 @@ print("% Mujeres:", pm)
 <summary>Pseudocódigo</summary>
 
 ```
-Algoritmo PrecioFinal
-    Definir precio, desc, iva, total Como Real
+Algoritmo Inversiones
+    Definir i1, i2, i3, total Como Real;
+    Definir p1, p2, p3 Como Real;
 
-    Escribir "Ingresa precio: "
-    Leer precio
+    Escribir "Ingresa inversiones: ";
+    Leer i1, i2, i3;
 
-    desc <- precio * 0.10
-    precio <- precio - desc
+    total <- i1 + i2 + i3;
 
-    iva <- precio * 0.16
-    total <- precio + iva
+    p1 <- (i1 * 100) / total;
+    p2 <- (i2 * 100) / total;
+    p3 <- (i3 * 100) / total;
 
-    Escribir "Total:", total
+    Escribir p1, p2, p3;
 FinAlgoritmo
 ```
 </details>
@@ -1080,18 +1050,16 @@ FinAlgoritmo
 using namespace std;
 
 int main() {
-    float precio, desc, iva, total;
+    float i1, i2, i3, total;
 
-    cout << "Precio: ";
-    cin >> precio;
+    cout << "Ingresa inversiones: ";
+    cin >> i1 >> i2 >> i3;
 
-    desc = precio * 0.10;
-    precio = precio - desc;
+    total = i1 + i2 + i3;
 
-    iva = precio * 0.16;
-    total = precio + iva;
-
-    cout << "Total: $" << total;
+    cout << "Porcentaje 1: " << (i1*100)/total << endl;
+    cout << "Porcentaje 2: " << (i2*100)/total << endl;
+    cout << "Porcentaje 3: " << (i3*100)/total;
 
     return 0;
 }
@@ -1102,12 +1070,15 @@ int main() {
 <summary>Python</summary>
 
 ```Python
-precio = float(input("Precio: "))
+i1 = float(input("Inversion 1: "))
+i2 = float(input("Inversion 2: "))
+i3 = float(input("Inversion 3: "))
 
-precio -= precio * 0.10
-total = precio + (precio * 0.16)
+total = i1 + i2 + i3
 
-print("Total:", total)
+print("Porcentaje 1:", (i1*100)/total)
+print("Porcentaje 2:", (i2*100)/total)
+print("Porcentaje 3:", (i3*100)/total)
 ```
 </details>
 
@@ -1116,14 +1087,43 @@ print("Total:", total)
 <summary>Pseudocódigo</summary>
 
 ```
-Algoritmo Promedio
-    Definir nu1, num2, num3, prom Como Real
 
-    Leer num1, num2, num3
+```
+</details>
 
-    prom <- (num1 + num2 + num3) / 3
+<details>
+<summary>C++</summary>
 
-    Escribir "Promedio:", prom
+```C++
+
+```
+</details>
+
+<details>
+<summary>Python</summary>
+
+```Python
+
+```
+</details>
+
+##### Ejercicio 22. Calcular la calificación final de Juan si esta se compone de los siguientes porcentajes:
+| PROMEDIO DE SUS TRES CALIFICACIONES PARCIALES |  EXAMEN FINAL   |   PROYECTO FINAL   |
+| :---:                                         |     :---:       |    :--:            |
+|              50%                              |     30%         |     20%            | 
+<details>
+<summary>Pseudocódigo</summary>
+
+```
+Algoritmo Calificacion
+    Definir parcial, examen, proyecto, final Como Real;
+
+    Escribir "Ingrese calificaciones: ";
+    Leer parcial, examen, proyecto;
+
+    final <- parcial*0.50 + examen*0.30 + proyecto*0.20;
+
+    Escribir "Calificacion final:", final;
 FinAlgoritmo
 ```
 </details>
@@ -1136,13 +1136,14 @@ FinAlgoritmo
 using namespace std;
 
 int main() {
-    float n1, n2, n3;
+    float parcial, examen, proyecto, final;
 
-    cin >> n1 >> n2 >> n3;
+    cout << "Ingrese notas: ";
+    cin >> parcial >> examen >> proyecto;
 
-    float prom = (n1 + n2 + n3) / 3;
+    final = parcial*0.50 + examen*0.30 + proyecto*0.20;
 
-    cout << "Promedio: " << prom;
+    cout << "Final: " << final;
 
     return 0;
 }
@@ -1153,38 +1154,12 @@ int main() {
 <summary>Python</summary>
 
 ```Python
-n1 = float(input())
-n2 = float(input())
-n3 = float(input())
+parcial = float(input("Parcial: "))
+examen = float(input("Examen: "))
+proyecto = float(input("Proyecto: "))
 
-print("Promedio:", (n1+n2+n3)/3)
-```
-</details>
+final = parcial*0.50 + examen*0.30 + proyecto*0.20
 
-##### Ejercicio 22. Calcular la calificación final de juan si esta se compone de los siguientes porcentajes:
-| PROMEDIO DE SUS TRES CALIFICACIONES PARCIALES |  EXAMEN FINAL   |   PROYECTO FINAL   |
-| :---:                                         |     :---:       |    :--:            |
-|              50%                              |     30%         |     20%            | 
-<details>
-<summary>Pseudocódigo</summary>
-
-```
-
-```
-</details>
-
-<details>
-<summary>C++</summary>
-
-```C++
-
-```
-</details>
-
-<details>
-<summary>Python</summary>
-
-```Python
-
+print("Calificacion final:", final)
 ```
 </details>
