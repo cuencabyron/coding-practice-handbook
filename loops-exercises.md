@@ -68,7 +68,7 @@ print("Doble de la suma:", suma * 2)
 Algoritmo Descendente7
     Definir i Como Entero;
 	
-    Para i <- 700 Hasta 0 Con Paso -7 Hacer;
+    Para i <- 700 Hasta 0 Con Paso -7 Hacer
         Escribir i;
     FinPara
 FinAlgoritmo
@@ -186,7 +186,28 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo MenorNumero
+    Definir num, menor, i Como Entero;
 
+    i <- 1;
+
+    Escribir "Ingresa numero: ";
+    Leer num;
+    menor <- num;
+
+    Repetir
+        Escribir "Ingrese numero: ";
+        Leer num;
+
+        Si num < menor Entonces
+            menor <- num;
+        FinSi
+
+        i <- i + 1;
+    Hasta Que i = 10;
+
+    Escribir "Menor: ", menor;
+FinAlgoritmo
 ```
 </details>
 
@@ -194,7 +215,29 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num, menor, i = 1;
+
+    cout << "Ingresa numero: ";
+    cin >> num;
+    menor = num;
+
+    do {
+        cout << "Ingresa numero: ";
+        cin >> num;
+
+        if(num < menor)
+            menor = num;
+
+        i++;
+    } while(i < 10);
+
+    cout << "Menor: " << menor;
+    return 0;
+}
 ```
 </details>
 
@@ -202,7 +245,23 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+i = 1
 
+num = int(input("Ingresa numero: "))
+menor = num
+
+while True:
+    num = int(input("Ingresa numero: "))
+    
+    if num < menor:
+        menor = num
+    
+    i += 1
+    
+    if i == 10:
+        break
+
+print("Menor: ", menor)
 ```
 </details>
 
@@ -211,7 +270,23 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo SumaHasta7
+    Definir num, suma Como Entero;
 
+    suma <- 0;
+
+    Escribir "Ingresa un número (7 para salir): ";
+    Leer num;
+
+    Mientras num <> 7 Hacer
+        suma <- suma + num;
+
+        Escribir "Ingresa un numero: ";
+        Leer num;
+    FinMientras
+
+    Escribir "Suma total: ", suma;
+FinAlgoritmo
 ```
 </details>
 
@@ -219,7 +294,25 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num, suma = 0;
+
+    cout << "Ingresa un número (7 para salir): ";
+    cin >> num;
+
+    while(num != 7) {
+        suma += num;
+
+        cout << "Ingresa un numero: ";
+        cin >> num;
+    }
+
+    cout << "Suma total: " << suma;
+    return 0;
+}
 ```
 </details>
 
@@ -227,7 +320,15 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+suma = 0
 
+num = int(input("Ingresa  un numero (7 para salir): "))
+
+while num != 7:
+    suma += num
+    num = int(input("Ingresa un numero: "))
+
+print("Suma total: ", suma)
 ```
 </details>
 
@@ -236,7 +337,27 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo ParesImpares
+    Definir num, sumaP, sumaI Como Entero;
 
+    sumaP <- 0;
+    sumaI <- 0;
+
+    Repetir
+        Escribir "Ingrese numero (2 para salir): ";
+        Leer num;
+
+        Si num MOD 2 = 0 Entonces
+            sumaP <- sumaP + num;
+        SiNo
+            sumaI <- sumaI + num;
+        FinSi
+
+    Hasta Que num = 2;
+
+    Escribir "Suma pares:", sumaP;
+    Escribir "Suma impares:", sumaI;
+FinAlgoritmo
 ```
 </details>
 
@@ -244,7 +365,28 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num, sumaP = 0, sumaI = 0;
+
+    do {
+        cout << "Ingresa numero (2 para salir): ";
+        cin >> num;
+
+        if(num % 2 == 0)
+            sumaP += num;
+        else
+            sumaI += num;
+
+    } while(num != 2);
+
+    cout << "Suma pares: " << sumaP << endl;
+    cout << "Suma impares: " << sumaI;
+
+    return 0;
+}
 ```
 </details>
 
@@ -252,7 +394,22 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+sumaP = 0
+sumaI = 0
 
+while True:
+    num = int(input("Ingresa numero (2 para salir): "))
+
+    if num % 2 == 0:
+        sumaP += num
+    else:
+        sumaI += num
+
+    if num == 2:
+        break
+
+print("Suma pares: ", sumaP)
+print("Suma impares: ", sumaI)
 ```
 </details>
 
@@ -261,7 +418,22 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo ContarCinco
+    Definir num, contador, i Como Entero;
 
+    contador <- 0;
+
+    Para i <- 1 Hasta 10 Hacer
+        Escribir "Ingresa numero: ";
+        Leer num;
+
+        Si num = 5 Entonces
+            contador <- contador + 1;
+        FinSi
+    FinPara
+
+    Escribir "Cantidad de numeros 5: ", contador;
+FinAlgoritmo
 ```
 </details>
 
@@ -269,7 +441,23 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num, contador = 0;
+
+    for(int i = 1; i <= 10; i++) {
+        cout << "Ingresa numero: ";
+        cin >> num;
+
+        if(num == 5)
+            contador++;
+    }
+
+    cout << "Cantidad de numeros 5: " << contador;
+    return 0;
+}
 ```
 </details>
 
@@ -277,7 +465,15 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+contador = 0
 
+for i in range(10):
+    num = int(input("Ingresa numero: "))
+    
+    if num == 5:
+        contador += 1
+
+print("Cantidad de numeros 5: ", contador)
 ```
 </details>
 
@@ -286,7 +482,25 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo SumaRango
+    Definir num, suma, i Como Entero;
 
+    suma <- 0;
+    i <- 1:
+
+    Mientras i <= 10 Hacer
+        Escribir "Ingresa numero: ";
+        Leer num;
+
+        Si num > 5 Y num < 50 Entonces
+            suma <- suma + num;
+        FinSi
+
+        i <- i + 1;
+    FinMientras
+
+    Escribir "Suma: ", suma;
+FinAlgoritmo
 ```
 </details>
 
@@ -294,7 +508,25 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num, suma = 0, i = 1;
+
+    while(i <= 10) {
+        cout << "Ingresa numero: ";
+        cin >> num;
+
+        if(num > 5 && num < 50)
+            suma += num;
+
+        i++;
+    }
+
+    cout << "Suma: " << suma;
+    return 0;
+}
 ```
 </details>
 
@@ -302,7 +534,18 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+suma = 0
+i = 1
 
+while i <= 10:
+    num = int(input("Ingresa numero: "))
+    
+    if num > 5 and num < 50:
+        suma += num
+    
+    i += 1
+
+print("Suma:", suma)
 ```
 </details>
 
@@ -311,7 +554,24 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo CompraCliente
+    Definir n, i Como Entero;
+    Definir costo, total Como Real;
 
+    total <- 0;
+
+    Escribir "Ingresa cantidad de productos: ";
+    Leer n;
+
+    Para i <- 1 Hasta n Hacer
+        Escribir "Ingresa costo del producto: ";
+        Leer costo;
+        total <- total + costo;
+    FinPara
+
+    Escribir "Total a pagar: ", total;
+    Escribir "Numero de productos:", n;
+FinAlgoritmo
 ```
 </details>
 
@@ -319,7 +579,27 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n;
+    float costo, total = 0;
+
+    cout << "Cantidad de productos: ";
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        cout << "Costo del producto: ";
+        cin >> costo;
+        total += costo;
+    }
+
+    cout << "Total a pagar: $" << total << endl;
+    cout << "Numero de productos: " << n;
+
+    return 0;
+}
 ```
 </details>
 
@@ -327,7 +607,16 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Cantidad de productos: "))
 
+total = 0
+
+for i in range(n):
+    costo = float(input("Costo del producto: "))
+    total += costo
+
+print("Total a pagar:", total)
+print("Numero de productos:", n)
 ```
 </details>
 
@@ -336,7 +625,27 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo VentasDia
+    Definir monto, totalDia Como Real;
+    Definir clientes Como Entero;
 
+    totalDia <- 0;
+    clientes <- 0;
+
+    Escribir "Ingresa monto de compra (0 para terminar): ";
+    Leer monto;
+
+    Mientras monto <> 0 Hacer
+        totalDia <- totalDia + monto;
+        clientes <- clientes + 1;
+
+        Escribir "Ingresa monto de compra: ";
+        Leer monto;
+    FinMientras
+
+    Escribir "Total de ventas:", totalDia;
+    Escribir "Clientes atendidos:", clientes;
+FinAlgoritmo
 ```
 </details>
 
@@ -344,7 +653,29 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float monto, totalDia = 0;
+    int clientes = 0;
+
+    cout << "Ingresa monto (0 para terminar): ";
+    cin >> monto;
+
+    while(monto != 0) {
+        totalDia += monto;
+        clientes++;
+
+        cout << "Ingresa monto: ";
+        cin >> monto;
+    }
+
+    cout << "Total ventas: $" << totalDia << endl;
+    cout << "Clientes atendidos: " << clientes;
+
+    return 0;
+}
 ```
 </details>
 
@@ -352,7 +683,19 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+total_dia = 0
+clientes = 0
 
+monto = float(input("Ingresa monto (0 para terminar): "))
+
+while monto != 0:
+    total_dia += monto
+    clientes += 1
+
+    monto = float(input("Ingresa monto: "))
+
+print("Total ventas:", total_dia)
+print("Clientes atendidos:", clientes)
 ```
 </details>
 
@@ -361,7 +704,34 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo ClasificarEdades
+    Definir n, edad, i Como Entero;
+    Definir ninos, jovenes, adultos Como Entero;
 
+    ninos <- 0;
+    jovenes <- 0;
+    adultos <- 0;
+
+    Escribir "Ingrese cantidad de personas: ";
+    Leer n;
+
+    Para i <- 1 Hasta n Hacer
+        Escribir "Ingrese edad: ";
+        Leer edad;
+
+        Si edad >= 0 Y edad <= 13 Entonces
+            ninos <- ninos + 1;
+        SinoSi edad <= 29 Entonces
+            jovenes <- jovenes + 1;
+        SiNo
+            adultos <- adultos + 1;
+        FinSi
+    FinPara
+
+    Escribir "Niños: ", ninos;
+    Escribir "Jovenes: ", jovenes;
+    Escribir "Adultos: ", adultos;
+FinAlgoritmo
 ```
 </details>
 
@@ -369,7 +739,34 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n, edad;
+    int ninos = 0, jovenes = 0, adultos = 0;
+
+    cout << "Cantidad de personas: ";
+    cin >> n;
+
+    for(int i = 1; i <= n; i++) {
+        cout << "Edad: ";
+        cin >> edad;
+
+        if(edad >= 0 && edad <= 13)
+            ninos++;
+        else if(edad <= 29)
+            jovenes++;
+        else
+            adultos++;
+    }
+
+    cout << "Niños: " << ninos << endl;
+    cout << "Jovenes: " << jovenes << endl;
+    cout << "Adultos: " << adultos;
+
+    return 0;
+}
 ```
 </details>
 
@@ -377,7 +774,23 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Cantidad de personas: "))
 
+ninos = jovenes = adultos = 0
+
+for i in range(n):
+    edad = int(input("Edad: "))
+
+    if 0 <= edad <= 13:
+        ninos += 1
+    elif edad <= 29:
+        jovenes += 1
+    else:
+        adultos += 1
+
+print("Niños:", ninos)
+print("Jovenes:", jovenes)
+print("Adultos:", adultos)
 ```
 </details>
 
@@ -386,7 +799,58 @@ print("Mayor:", mayor)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Calificaciones
+    Definir n, i Como Entero;
+    Definir nota, suma, promedio Como Real;
+    Definir mayor, menor Como Real;
+    Definir aprobados, reprobados Como Entero;
 
+    suma <- 0;
+    aprobados <- 0;
+    reprobados <- 0;
+    i <- 1;
+
+    Escribir "Cantidad de calificaciones: ";
+    Leer n;
+
+    Mientras i <= n Hacer
+
+        Repetir
+            Escribir "Ingresa calificacion (0-10): ";
+            Leer nota;
+        Hasta Que nota >= 0 Y nota <= 10;
+
+        Si i = 1 Entonces
+            mayor <- nota;
+            menor <- nota;
+        SiNo
+            Si nota > mayor Entonces
+                mayor <- nota;
+            FinSi
+            Si nota < menor Entonces
+                menor <- nota;
+            FinSi
+        FinSi
+
+        suma <- suma + nota;
+
+        Si nota >= 6 Entonces
+            aprobados <- aprobados + 1;
+        SiNo
+            reprobados <- reprobados + 1;
+        FinSi
+
+        i <- i + 1;
+    FinMientras
+
+    promedio <- suma / n;
+
+    Escribir "Promedio:", promedio;
+    Escribir "Mayor:", mayor;
+    Escribir "Menor:", menor;
+    Escribir "% Aprobados:", (aprobados*100)/n;
+    Escribir "% Reprobados:", (reprobados*100)/n;
+FinAlgoritmo
 ```
 </details>
 
@@ -394,7 +858,52 @@ print("Mayor:", mayor)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int n, i = 1;
+    float nota, suma = 0, promedio;
+    float mayor, menor;
+    int aprobados = 0, reprobados = 0;
+
+    cout << "Cantidad de calificaciones: ";
+    cin >> n;
+
+    while(i <= n) {
+
+        do {
+            cout << "Ingresa nota (0-10): ";
+            cin >> nota;
+        } while(nota < 0 || nota > 10);
+
+        if(i == 1) {
+            mayor = menor = nota;
+        } else {
+            if(nota > mayor) mayor = nota;
+            if(nota < menor) menor = nota;
+        }
+
+        suma += nota;
+
+        if(nota >= 6)
+            aprobados++;
+        else
+            reprobados++;
+
+        i++;
+    }
+
+    promedio = suma / n;
+
+    cout << "Promedio: " << promedio << endl;
+    cout << "Mayor: " << mayor << endl;
+    cout << "Menor: " << menor << endl;
+    cout << "% Aprobados: " << (aprobados*100.0)/n << endl;
+    cout << "% Reprobados: " << (reprobados*100.0)/n;
+
+    return 0;
+}
 ```
 </details>
 
@@ -402,7 +911,44 @@ print("Mayor:", mayor)
 <summary>Python</summary>
 
 ```Python
+n = int(input("Cantidad de calificaciones: "))
 
+i = 1
+suma = 0
+aprobados = 0
+reprobados = 0
+
+while i <= n:
+
+    while True:
+        nota = float(input("Ingresa nota (0-10): "))
+        if 0 <= nota <= 10:
+            break
+
+    if i == 1:
+        mayor = menor = nota
+    else:
+        if nota > mayor:
+            mayor = nota
+        if nota < menor:
+            menor = nota
+
+    suma += nota
+
+    if nota >= 6:
+        aprobados += 1
+    else:
+        reprobados += 1
+
+    i += 1
+
+promedio = suma / n
+
+print("Promedio:", promedio)
+print("Mayor:", mayor)
+print("Menor:", menor)
+print("% Aprobados:", (aprobados*100)/n)
+print("% Reprobados:", (reprobados*100)/n)
 ```
 </details>
 
