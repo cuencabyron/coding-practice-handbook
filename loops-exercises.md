@@ -7,6 +7,7 @@ Este repositorio contiene una colección de ejercicios enfocados exclusivamente 
 - Python
 
 **Contenido**
+
 Los ejercicios incluyen:
 - Lectura de múltiples datos
 - Suma de valores (acumuladores)
@@ -17,6 +18,7 @@ Los ejercicios incluyen:
 - Clasificación de datos dentro de un ciclo
 
 **Tipos de Bucles Utilizados**
+
 - Para ```(for)```
 Se utiliza cuando se conoce la cantidad de repeticiones.
 - Mientras ```(while)```
@@ -25,6 +27,7 @@ Se utiliza cuando no se conoce cuántas veces se repetirá el proceso.
 Se utiliza cuando el bloque debe ejecutarse al menos una vez.
 
 **Conceptos Clave**
+
 Durante estos ejercicios se aplican:
 - Acumuladores ```(suma = suma + valor)```
 - Contadores ```(contador = contador + 1)```
@@ -33,12 +36,14 @@ Durante estos ejercicios se aplican:
 - Control de flujo
 
 **Objetivo**
+
 Fortalecer la lógica de programación mediante el uso de bucles para:
 - Repetir procesos
 - Procesar múltiples datos
 - Resolver problemas de manera estructurada
 
 **Nota**
+
 Todos los ejercicios mantienen la misma lógica en los tres lenguajes, cambiando únicamente la sintaxís.
 
 ---

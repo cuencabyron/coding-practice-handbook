@@ -7,7 +7,9 @@ Este repositorio contiene una colección de ejercicios básicos de programación
 - Python
 
 **Contenido**
+
 Los ejercicios incluyen:
+
 - Operaciones básicas
 - Porcentajes
 - Conversiones
@@ -16,6 +18,7 @@ Los ejercicios incluyen:
 - Problemas clásicos de lógica
 
 **Objetivo**
+
 Reforzar la lógica de programación y comparar la implementación en diferentes lenguajes.
 
 ---
