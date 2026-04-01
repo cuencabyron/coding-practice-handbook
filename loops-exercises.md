@@ -19,18 +19,18 @@ Los ejercicios incluyen:
 
 **Tipos de Bucles Utilizados**
 
-- Para ```(for)```
+- Para `(for)`
 Se utiliza cuando se conoce la cantidad de repeticiones.
-- Mientras ```(while)```
+- Mientras `(while)`
 Se utiliza cuando no se conoce cuántas veces se repetirá el proceso.
-- Repetir ```(do-while)```
+- Repetir `(do-while)`
 Se utiliza cuando el bloque debe ejecutarse al menos una vez.
 
 **Conceptos Clave**
 
 Durante estos ejercicios se aplican:
-- Acumuladores ```(suma = suma + valor)```
-- Contadores ```(contador = contador + 1)```
+- Acumuladores `(suma = suma + valor)`
+- Contadores `(contador = contador + 1)`
 - Condiciones dentro de bucles
 - Validación de datos
 - Control de flujo

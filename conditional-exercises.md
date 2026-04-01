@@ -1,4 +1,4 @@
-<h1 align="center">EJERCICIOS DE CONDICIONALES</h1>
+<h1 align="center">EJERCICIOS DE CONDICIONALES EN PROGRAMACIÓN</h1>
 
 ---
 
@@ -7,7 +7,18 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo ParImpar
+    Definir num Como Entero;
 
+    Escribir "Ingresa numero: ";
+    Leer num;
+
+    Si num MOD 2 = 0 Entonces
+        Escribir "Es par";
+    SiNo
+        Escribir "Es impar";
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -15,7 +26,21 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num;
+    cout << "Ingresa numero: ";
+    cin >> num;
+
+    if(num % 2 == 0)
+        cout << "Es par";
+    else
+        cout << "Es impar";
+
+    return 0;
+}
 ```
 </details>
 
@@ -23,7 +48,12 @@
 <summary>Python</summary>
 
 ```Python
+num = int(input("Ingresa numero: "))
 
+if num % 2 == 0:
+    print("Es par")
+else:
+    print("Es impar")
 ```
 </details>
 
@@ -32,7 +62,26 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Multiplos
+    Definir num Como Entero;
 
+    Escribir "Ingresa numero: ";
+    Leer num;
+
+    Si num MOD 2 = 0 Entonces
+        Escribir "Multiplo de 2";
+    SiNo
+        Si num MOD 3 = 0 Entonces
+            Escribir "Multiplo de 3";
+        SiNo
+            Si num MOD 4 = 0 Entonces
+                Escribir "Multiplo de 4";
+            SiNo
+                Escribir "Numero invalido";
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -40,7 +89,25 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int num;
+    cout << "Ingresa numero: ";
+    cin >> num;
+
+    if(num % 2 == 0)
+        cout << "Multiplo de 2";
+    else if(num % 3 == 0)
+        cout << "Multiplo de 3";
+    else if(num % 4 == 0)
+        cout << "Multiplo de 4";
+    else
+        cout << "Numero invalido";
+
+    return 0;
+}
 ```
 </details>
 
@@ -48,7 +115,16 @@
 <summary>Python</summary>
 
 ```Python
+num = int(input("Ingresa numero: "))
 
+if num % 2 == 0:
+    print("Multiplo de 2")
+elif num % 3 == 0:
+    print("Multiplo de 3")
+elif num % 4 == 0:
+    print("Multiplo de 4")
+else:
+    print("Numero invalido")
 ```
 </details>
 
@@ -60,7 +136,22 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Estatura
+    Definir altura Como Real;
 
+    Escribir "Ingrese altura: ";
+    Leer altura;
+
+    Si altura >= 1.80 Entonces
+        Escribir "Alto";
+    SiNo
+        Si altura >= 1.60 Entonces
+            Escribir "Promedio";
+        SiNo
+            Escribir "Bajo";
+        FinSi
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -68,7 +159,23 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float altura;
+    cout << "Ingresa altura: ";
+    cin >> altura;
+
+    if(altura >= 1.80)
+        cout << "Alto";
+    else if(altura >= 1.60)
+        cout << "Promedio";
+    else
+        cout << "Bajo";
+
+    return 0;
+}
 ```
 </details>
 
@@ -76,7 +183,14 @@
 <summary>Python</summary>
 
 ```Python
+altura = float(input("Ingresa altura: "))
 
+if altura >= 1.80:
+    print("Alto")
+elif altura >= 1.60:
+    print("Promedio")
+else:
+    print("Bajo")
 ```
 </details>
 
@@ -85,7 +199,20 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Aprobado
+    Definir cal1, cal2, cal3, promedio Como Real;
 
+    Escribir "Ingrese 3 calificaciones: ";
+    Leer cal1, cal2, cal3;
+
+    promedio <- (cal1 + cal2 + cal3) / 3;
+
+    Si promedio >= 7 Entonces
+        Escribir "Aprueba";
+    SiNo
+        Escribir "Reprueba";
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -93,7 +220,24 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float cal1, cal2, cal3, promedio;
+
+    cout << "Ingresa 3 calificaciones: ";
+    cin >> cal1 >> cal2 >> cal3;
+
+    promedio = (cal1 + cal2 + cal3) / 3;
+
+    if(promedio >= 7)
+        cout << "Aprueba";
+    else
+        cout << "Reprueba";
+
+    return 0;
+}
 ```
 </details>
 
@@ -101,7 +245,16 @@
 <summary>Python</summary>
 
 ```Python
+cal1 = float(input("Nota 1: "))
+cal2 = float(input("Nota 2: "))
+cal3 = float(input("Nota 3: "))
 
+promedio = (cal1 + cal2 + cal3) / 3
+
+if promedio >= 7:
+    print("Aprueba")
+else:
+    print("Reprueba")
 ```
 </details>
 
@@ -110,7 +263,28 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo InteresBanco
+    Definir inversion, interes Como Real;
 
+    Escribir "Ingrese monto de inversion: ";
+    Leer inversion;
+
+    Si inversion >= 40000 Entonces
+        interes <- inversion * 0.05;
+    SiNo
+        Si inversion >= 20000 Entonces
+            interes <- inversion * 0.03;
+        SiNo
+            Si inversion >= 10000 Entonces
+                interes <- inversion * 0.02;
+            SiNo
+                interes <- 0;
+            FinSi
+        FinSi
+    FinSi
+
+    Escribir "Interes: ", interes;
+FinAlgoritmo
 ```
 </details>
 
@@ -118,7 +292,28 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float inversion, interes;
+
+    cout << "Ingresa inversion: ";
+    cin >> inversion;
+
+    if(inversion >= 40000)
+        interes = inversion * 0.05;
+    else if(inversion >= 20000)
+        interes = inversion * 0.03;
+    else if(inversion >= 10000)
+        interes = inversion * 0.02;
+    else
+        interes = 0;
+
+    cout << "Interes: $" << interes;
+
+    return 0;
+}
 ```
 </details>
 
@@ -126,7 +321,18 @@
 <summary>Python</summary>
 
 ```Python
+inversion = float(input("Ingresa inversion: "))
 
+if inversion >= 40000:
+    interes = inversion * 0.05
+elif inversion >= 20000:
+    interes = inversion * 0.03
+elif inversion >= 10000:
+    interes = inversion * 0.02
+else:
+    interes = 0
+
+print("Interes:", interes)
 ```
 </details>
 
@@ -162,7 +368,20 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo SalarioObrero
+    Definir horas, salario Como Real;
 
+    Escribir "Horas trabajadas: ";
+    Leer horas;
+
+    Si horas <= 40 Entonces
+        salario <- horas * 16;
+    SiNo
+        salario <- 40 * 16 + (horas - 40) * 20;
+    FinSi
+
+    Escribir "Salario: ", salario;
+FinAlgoritmo
 ```
 </details>
 
@@ -170,7 +389,24 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float horas, salario;
+
+    cout << "Horas trabajadas: ";
+    cin >> horas;
+
+    if(horas <= 40)
+        salario = horas * 16;
+    else
+        salario = 40 * 16 + (horas - 40) * 20;
+
+    cout << "Salario: $" << salario;
+
+    return 0;
+}
 ```
 </details>
 
@@ -178,7 +414,14 @@
 <summary>Python</summary>
 
 ```Python
+horas = float(input("Horas trabajadas: "))
 
+if horas <= 40:
+    salario = horas * 16
+else:
+    salario = 40 * 16 + (horas - 40) * 20
+
+print("Salario:", salario)
 ```
 </details>
 
@@ -190,7 +433,18 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Ordenar
+    Definir num1, num2 Como Entero;
 
+    Escribir "Ingrese dos numeros: ";
+    Leer num1, num2;
+
+    Si num1 < num2 Entonces
+        Escribir num1, num2;
+    SiNo
+        Escribir num2, num1;
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -198,7 +452,22 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int a, b;
+
+    cout << "Ingresa dos numeros: ";
+    cin >> num1 >> num2;
+
+    if(num1 < num2)
+        cout << num1 << " " << num2;
+    else
+        cout << num2 << " " << num1;
+
+    return 0;
+}
 ```
 </details>
 
@@ -206,7 +475,13 @@
 <summary>Python</summary>
 
 ```Python
+num1 = int(input("Numero 1: "))
+num2 = int(input("Numero 2: "))
 
+if num1 < b:
+    print(num1, num2)
+else:
+    print(num2, num1)
 ```
 </details>
 
@@ -215,7 +490,24 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Camisas
+    Definir cantidad, precio, total, descuento Como Real
 
+    Escribir "Cantidad de camisas: ";
+    Leer cantidad;
+    Escribir "Precio por camisa: ";
+    Leer precio;
+
+    total <- cantidad * precio;
+
+    Si cantidad >= 3 Entonces
+        descuento <- total * 0.20;
+    SiNo
+        descuento <- total * 0.10;
+    FinSi
+
+    Escribir "Total a pagar: ", total - descuento;
+FinAlgoritmo
 ```
 </details>
 
@@ -223,7 +515,29 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int cantidad;
+    float precio, total, descuento;
+
+    cout << "Cantidad de camisas: ";
+    cin >> cantidad;
+    cout << "Precio por camisa: ";
+    cin >> precio;
+
+    total = cantidad * precio;
+
+    if(cantidad >= 3)
+        descuento = total * 0.20;
+    else
+        descuento = total * 0.10;
+
+    cout << "Total a pagar: $" << total - descuento;
+
+    return 0;
+}
 ```
 </details>
 
@@ -231,11 +545,21 @@
 <summary>Python</summary>
 
 ```Python
+cantidad = int(input("Cantidad de camisas: "))
+precio = float(input("Precio por camisa: "))
 
+total = cantidad * precio
+
+if cantidad >= 3:
+    descuento = total * 0.20
+else:
+    descuento = total * 0.10
+
+print("Total a pagar:", total - descuento)
 ```
 </details>
 
-##### Ejercicio 10. Calcular el total que una persona debe pagar en una llantera, si el precio de cada llanta es de $800 si se compran menos de 5 llantas y de $700 si se compran 5 o más
+##### Ejercicio 10. Calcular el total que una persona debe pagar en una llantera, si el precio de cada llanta es de $ 800 si se compran menos de 5 llantas y de $700 si se compran 5 o más
 <details>
 <summary>Pseudocódigo</summary>
 
@@ -265,7 +589,20 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo AlmacenDescuento
+    Definir total, descuento Como Real;
 
+    Escribir "Total de compra: ";
+    Leer total;
+
+    Si total > 1000 Entonces
+        descuento <- total * 0.20;
+    SiNo
+        descuento <- 0;
+    FinSi
+
+    Escribir "Total a pagar: ", total - descuento;
+FinAlgoritmo
 ```
 </details>
 
@@ -273,7 +610,24 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float total, descuento;
+
+    cout << "Total de compra: ";
+    cin >> total;
+
+    if(total > 1000)
+        descuento = total * 0.20;
+    else
+        descuento = 0;
+
+    cout << "Total a pagar: $" << total - descuento;
+
+    return 0;
+}
 ```
 </details>
 
@@ -281,7 +635,14 @@
 <summary>Python</summary>
 
 ```Python
+total = float(input("Total de compra: "))
 
+if total > 1000:
+    descuento = total * 0.20
+else:
+    descuento = 0
+
+print("Total a pagar:", total - descuento)
 ```
 </details>
 
@@ -290,7 +651,28 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Libreria
+    Definir total, descuento Como Real;
+    Definir esEstudiante Como Caracter;
 
+    Escribir "Total de compra: ";
+    Leer total;
+
+    descuento <- 0
+
+    Si total > 5000 Entonces
+        descuento <- descuento + total * 0.05;
+    FinSi
+
+    Escribir "Es estudiante? (S/N): ";
+    Leer esEstudiante;
+
+    Si esEstudiante = "S" Entonces
+        descuento <- descuento + total * 0.03;
+    FinSi
+
+    Escribir "Total a pagar:", total - descuento;
+FinAlgoritmo
 ```
 </details>
 
@@ -298,7 +680,29 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float total, descuento = 0;
+    char estudiante;
+
+    cout << "Total de compra: ";
+    cin >> total;
+
+    if(total > 5000)
+        descuento += total * 0.05;
+
+    cout << "Es estudiante? (S/N): ";
+    cin >> estudiante;
+
+    if(estudiante == 'S' || estudiante == 's')
+        descuento += total * 0.03;
+
+    cout << "Total a pagar: $" << total - descuento;
+
+    return 0;
+}
 ```
 </details>
 
@@ -306,7 +710,18 @@
 <summary>Python</summary>
 
 ```Python
+total = float(input("Total de compra: "))
+descuento = 0
 
+if total > 5000:
+    descuento += total * 0.05
+
+estudiante = input("Es estudiante? (S/N): ").lower()
+
+if estudiante == "s":
+    descuento += total * 0.03
+
+print("Total a pagar:", total - descuento)
 ```
 </details>
 
@@ -315,7 +730,22 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Galletas
+    Definir kilos, total, descuento Como Real;
 
+    Escribir "Kilos a comprar: ";
+    Leer kilos;
+
+    total <- kilos * 10;
+
+    Si kilos > 100 Entonces
+        descuento <- total * 0.10;
+    SiNo
+        descuento <- 0;
+    FinSi
+
+    Escribir "Total a pagar: ", total - descuento;
+FinAlgoritmo
 ```
 </details>
 
@@ -323,7 +753,26 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float kilos, total, descuento;
+
+    cout << "Kilos a comprar: ";
+    cin >> kilos;
+
+    total = kilos * 10;
+
+    if(kilos > 100)
+        descuento = total * 0.10;
+    else
+        descuento = 0;
+
+    cout << "Total a pagar: $" << total - descuento;
+
+    return 0;
+}
 ```
 </details>
 
@@ -331,7 +780,16 @@
 <summary>Python</summary>
 
 ```Python
+kilos = float(input("Kilos a comprar: "))
 
+total = kilos * 10
+
+if kilos > 100:
+    descuento = total * 0.10
+else:
+    descuento = 0
+
+print("Total a pagar:", total - descuento)
 ```
 </details>
 
@@ -340,7 +798,20 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Zapatos
+    Definir pares, salario Como Real;
 
+    Escribir "Pares empaquetados: "
+    Leer pares;
+
+    Si pares <= 500 Entonces
+        salario <- pares * 20;
+    SiNo
+        salario <- 500 * 20 + (pares - 500) * 30;
+    FinSi
+
+    Escribir "Salario: ", salario;
+FinAlgoritmo
 ```
 </details>
 
@@ -348,7 +819,25 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int pares;
+    float salario;
+
+    cout << "Pares empaquetados: ";
+    cin >> pares;
+
+    if(pares <= 500)
+        salario = pares * 20;
+    else
+        salario = 500 * 20 + (pares - 500) * 30;
+
+    cout << "Salario: $" << salario;
+
+    return 0;
+}
 ```
 </details>
 
@@ -356,7 +845,14 @@
 <summary>Python</summary>
 
 ```Python
+pares = int(input("Pares empaquetados: "))
 
+if pares <= 500:
+    salario = pares * 20
+else:
+    salario = 500 * 20 + (pares - 500) * 30
+
+print("Salario:", salario)
 ```
 </details>
 
@@ -365,7 +861,26 @@
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Calificacion
+    Definir nota Como Real;
 
+    Escribir "Ingrese calificacion: ";
+    Leer nota;
+
+    Si nota >= 8.5 Entonces
+        Escribir "MB";
+    SiNo
+        Si nota >= 7 Entonces
+            Escribir "B";
+        SiNo
+            Si nota >= 6 Entonces
+                Escribir "S";
+            SiNo
+                Escribir "NA";
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -373,7 +888,26 @@
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float nota;
+
+    cout << "Ingresa calificacion: ";
+    cin >> nota;
+
+    if(nota >= 8.5)
+        cout << "MB";
+    else if(nota >= 7)
+        cout << "B";
+    else if(nota >= 6)
+        cout << "S";
+    else
+        cout << "NA";
+
+    return 0;
+}
 ```
 </details>
 
@@ -381,7 +915,16 @@
 <summary>Python</summary>
 
 ```Python
+nota = float(input("Ingresa calificacion: "))
 
+if nota >= 8.5:
+    print("MB")
+elif nota >= 7:
+    print("B")
+elif nota >= 6:
+    print("S")
+else:
+    print("NA")
 ```
 </details>
 
