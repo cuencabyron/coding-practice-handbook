@@ -130,7 +130,7 @@ WHERE nivel IN (1, 2, 3);
 ```
 </details>
 
-##### Ejercicio 6. Listar los números de teléfono con saldo menor o igual a 300
+##### Ejercicio 6. Listar los números de teléfono con saldo menor o igual a $300
 <details>
 <summary>Solución</summary>
 
@@ -336,5 +336,71 @@ WHERE marca NOT IN ('MOTOROLA', 'NOKIA');
 SELECT SUM(saldo) 
 FROM user
 WHERE compania = 'TELCEL';
+```
+</details>
+
+##### Ejericio 25. Muestra todos los datos de los usuarios que tengan un celular de la marca MOTOROLA 
+<details>
+<summary>Solución</summary>
+
+```sql
+SELECT *
+FROM user
+WHERE marca = 'MOTOROLA';
+```
+</details>
+
+##### Ejericio 26. Muestra los siguientes datos: nombre del usuario, email, teléfono de los usuarios de la compañia MOVISTAR
+<details>
+<summary>Solución</summary>
+
+```sql
+SELECT nombre, email, telefono, compania
+FROM user
+WHERE compania = 'MOVISTAR';
+```
+</details>
+
+##### Ejericio 27. Muestra todos los datos del usuario 10
+<details>
+<summary>Solución</summary>
+
+```sql
+SELECT *
+FROM user
+WHERE username = 10;
+```
+</details>
+
+##### Ejericio 28. Muestra el nombre y saldo de los usuarios con saldo mayor o igual a $200
+<details>
+<summary>Solución</summary>
+
+```sql
+SELECT nombre, saldo
+FROM user
+WHERE saldo >= 200;
+```
+</details>
+
+##### Ejericio 29. Muestra el nombre y teléfono de los usuarios que son solo mujeres
+<details>
+<summary>Solución</summary>
+
+```sql
+SELECT nombre, telefono
+FROM tblUsuarios
+WHERE sexo = 'M';
+```
+</details>
+
+##### Ejericio 30. Muestra el nombre de la persona y su sexo cuyo sean hombres y su saldo este entre $100 y $200  
+<details>
+<summary>Solución</summary>
+
+```sql
+SELECT nombre, sexo
+FROM tblUsuarios
+WHERE saldo BETWEEN 100 AND 200;
 ```
 </details>
