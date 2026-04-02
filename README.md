@@ -8,4 +8,6 @@
     - [Condicionales](conditional-exercises.md)
     - [Bucles](loops-exercises.md)
 
-- [Ejercicios de Consultas de Base de Datos](telephone-company-database.md)
+- [Ejercicios de Base de Datos]()
+    - [Empresa Telefónica](telephone-company-database.md)
+    - [Tienda Informática](telephone-company-database.md)

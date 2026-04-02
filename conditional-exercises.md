@@ -336,7 +336,7 @@ print("Interes:", interes)
 ```
 </details>
 
-##### Ejercicio 6. En un almacén se hace un 5% de descuento a los clientes cuya compra supere los $6,000.00 o un 10% si la compra supera los $8,000.00 ¿Cuál será la cantidad que pagara una persona por su compra y cuál es su descuento?
+##### Ejericicio 6. En un almacén se hace un 5% de descuento a los clientes cuya compra supere los $6,000.00 on un 10% si la compra supera los $8,000.00 ¿Cuál será la cantidad que pagara una persona por su compra y cuál es su descuento?
 <details>
 <summary>Pseudocódigo</summary>
 
@@ -1197,12 +1197,35 @@ else:
 ```
 </details>
 
-##### Ejercicio 19. Un proveedor de estéreos ofrece un descuento del 10% sobre el precio sin IVA, de algún aparato si esta cuesta $2000 o más. Además, independientemente de esto, ofrece un 5% de descuento si la marca es “sony”. Determinar cuánto pagara, con IVA incluido, un cliente cualquiera por la compra de su aparato
+##### Ejercicio 19. Un proveedor de estéreos ofrece un descuento del 10% sobre el precio sin IVA, de algún aparato si esta cuesta $2000 o más. Además, independientemente de esto, ofrece un 5% de descuento si la marca es “sony”. Determinar cuánto pagara con IVA incluido un cliente cualquiera por la compra de su aparato
 <details>
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Estereos
+    Definir precio, descuento, total Como Real;
+    Definir marca Como Caracter;
 
+    Escribir "Precio del aparato: ";
+    Leer precio;
+    Escribir "Marca: ";
+    Leer marca;
+
+    descuento <- 0;
+
+    Si precio >= 2000 Entonces
+        descuento <- descuento + precio * 0.10;
+    FinSi
+
+    Si marca = "sony" Entonces
+        descuento <- descuento + precio * 0.05;
+    FinSi
+
+    total <- precio - descuento;
+    total <- total + total * 0.16;   // IVA
+
+    Escribir "Total a pagar:", total;
+FinAlgoritmo
 ```
 </details>
 
@@ -1210,7 +1233,31 @@ else:
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float precio, descuento = 0, total;
+    string marca;
+
+    cout << "Precio: ";
+    cin >> precio;
+    cout << "Marca: ";
+    cin >> marca;
+
+    if(precio >= 2000)
+        descuento += precio * 0.10;
+
+    if(marca == "sony" || marca == "Sony")
+        descuento += precio * 0.05;
+
+    total = precio - descuento;
+    total += total * 0.16;
+
+    cout << "Total a pagar: $" << total;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1218,7 +1265,21 @@ else:
 <summary>Python</summary>
 
 ```Python
+precio = float(input("Precio: "))
+marca = input("Marca: ").lower()
 
+descuento = 0
+
+if precio >= 2000:
+    descuento += precio * 0.10
+
+if marca == "sony":
+    descuento += precio * 0.05
+
+total = precio - descuento
+total += total * 0.16
+
+print("Total a pagar:", total)
 ```
 </details>
 
@@ -1234,7 +1295,30 @@ else:
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Manzanas
+    Definir kilos, precio, total, descuento Como Real;
 
+    Escribir "Kilos: ";
+    Leer kilos;
+
+    precio <- kilos * 10;
+
+    Si kilos <= 2 Entonces
+        descuento <- 0;
+    SiNo
+        Si kilos <= 5 Entonces
+            descuento <- precio * 0.10;
+        SiNo
+            Si kilos <= 10 Entonces
+                descuento <- precio * 0.15;
+            SiNo
+                descuento <- precio * 0.20;
+            FinSi
+        FinSi
+    FinSi
+
+    Escribir "Total a pagar: ", precio - descuento;
+FinAlgoritmo
 ```
 </details>
 
@@ -1242,7 +1326,30 @@ else:
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float kilos, precio, descuento;
+
+    cout << "Kilos: ";
+    cin >> kilos;
+
+    precio = kilos * 10;
+
+    if(kilos <= 2)
+        descuento = 0;
+    else if(kilos <= 5)
+        descuento = precio * 0.10;
+    else if(kilos <= 10)
+        descuento = precio * 0.15;
+    else
+        descuento = precio * 0.20;
+
+    cout << "Total a pagar: $" << precio - descuento;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1250,7 +1357,20 @@ else:
 <summary>Python</summary>
 
 ```Python
+kilos = float(input("Kilos: "))
 
+precio = kilos * 10
+
+if kilos <= 2:
+    descuento = 0
+elif kilos <= 5:
+    descuento = precio * 0.10
+elif kilos <= 10:
+    descuento = precio * 0.15
+else:
+    descuento = precio * 0.20
+
+print("Total a pagar:", precio - descuento)
 ```
 </details>
 
@@ -1284,7 +1404,21 @@ else:
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Beca
+    Definir promedio Como Real;
+    Definir anio Como Entero;
 
+    Escribir "Promedio: ";
+    Leer promedio;
+    Escribir "Año (1 o 2): ";
+    Leer anio;
+
+    Si promedio >= 9 Y (año = 1 O año = 2) Entonces
+        Escribir "Obtiene beca";
+    SiNo
+        Escribir "No obtiene beca";
+    FinSi
+FinAlgoritmo
 ```
 </details>
 
@@ -1292,7 +1426,25 @@ else:
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float promedio;
+    int anio;
+
+    cout << "Promedio: ";
+    cin >> promedio;
+    cout << "Año (1 o 2): ";
+    cin >> anio;
+
+    if(promedio >= 9 && (anio == 1 || anio == 2))
+        cout << "Obtiene beca";
+    else
+        cout << "No obtiene beca";
+
+    return 0;
+}
 ```
 </details>
 
@@ -1300,6 +1452,12 @@ else:
 <summary>Python</summary>
 
 ```Python
+promedio = float(input("Promedio: "))
+anio = int(input("Año (1 o 2): "))
 
+if promedio >= 9 and (anio == 1 or anio == 2):
+    print("Obtiene beca")
+else:
+    print("No obtiene beca")
 ```
 </details>

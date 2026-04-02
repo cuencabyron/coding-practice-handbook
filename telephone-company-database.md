@@ -25,7 +25,7 @@ USE empresa_telefonica;
 CREATE TABLE user (
     user_id INT AUTO_INCREMENT  NOT NULL,
     username VARCHAR(20)        NOT NULL,
-    name VARCHAR(20)            NOT NULL,
+    nombre VARCHAR(20)            NOT NULL,
     sexo VARCHAR(1)             NOT NULL,
     nivel TINYINT               NOT NULL,
     email VARCHAR(50)           NOT NULL, 
@@ -51,7 +51,7 @@ DESCRIBE user;
 ##### INSERCIÓN DE REGISTROS
 
 ```sql
-INSERT INTO user (username, name, sexo, nivel, email, telefono, marca, compania, saldo, activo)
+INSERT INTO user (username, nombre, sexo, nivel, email, telefono, marca, compania, saldo, activo)
 VALUES ('BRE2271','BRENDA','M',2,'brenda@live.com','655-330-5736','SAMSUNG','IUSACELL',100,1),
 ('OSC4677','OSCAR','H',3,'oscar@gmail.com','655-143-4181','LG','TELCEL',0,1),
 ('JOS7086','JOSE','H',3,'francisco@gmail.com','655-143-3922','NOKIA','MOVISTAR',150,1),
@@ -84,7 +84,7 @@ VALUES ('BRE2271','BRENDA','M',2,'brenda@live.com','655-330-5736','SAMSUNG','IUS
 <summary>Solución</summary>
 
 ```sql
-SELECT name FROM user;
+SELECT nombre FROM user;
 ```
 </details>
 
@@ -93,7 +93,7 @@ SELECT name FROM user;
 <summary>Solución</summary>
 
 ```sql
-SELECT MAX(saldo) FROM usuarios WHERE sexo = 'M';
+SELECT MAX(saldo) FROM user WHERE sexo = 'M';
 ```
 </details>
 
@@ -103,7 +103,7 @@ SELECT MAX(saldo) FROM usuarios WHERE sexo = 'M';
 
 ```sql
 SELECT nombre, telefono 
-FROM usuarios 
+FROM user
 WHERE marca IN ('NOKIA', 'BLACKBERRY', 'SONY');
 ```
 </details>
@@ -114,7 +114,7 @@ WHERE marca IN ('NOKIA', 'BLACKBERRY', 'SONY');
 
 ```sql
 SELECT COUNT(*) 
-FROM usuarios 
+FROM user 
 WHERE saldo = 0 OR activo = 0;
 ```
 </details>
@@ -125,7 +125,7 @@ WHERE saldo = 0 OR activo = 0;
 
 ```sql
 SELECT username 
-FROM usuarios 
+FROM user
 WHERE nivel IN (1, 2, 3);
 ```
 </details>
@@ -136,7 +136,7 @@ WHERE nivel IN (1, 2, 3);
 
 ```sql
 SELECT telefono 
-FROM usuarios 
+FROM user
 WHERE saldo <= 300;
 ```
 </details>
@@ -147,7 +147,7 @@ WHERE saldo <= 300;
 
 ```sql
 SELECT SUM(saldo) 
-FROM usuarios 
+FROM user 
 WHERE compania = 'NEXTEL';
 ```
 </details>
@@ -158,7 +158,7 @@ WHERE compania = 'NEXTEL';
 
 ```sql
 SELECT compania, COUNT(*) 
-FROM usuarios 
+FROM user
 GROUP BY compania;
 ```
 </details>
@@ -169,18 +169,18 @@ GROUP BY compania;
 
 ```sql
 SELECT nivel, COUNT(*) 
-FROM usuarios 
+FROM user
 GROUP BY nivel;
 ```
 </details>
 
-##### Ejercicio 10. Listar el login de los usuarios con nivel 2
+##### Ejercicio 10. Listar el username de los usuarios con nivel 2
 <details>
 <summary>Solución</summary>
 
 ```sql
 SELECT username
-FROM usuarios 
+FROM user 
 WHERE nivel = 2;
 ```
 </details>
@@ -191,7 +191,7 @@ WHERE nivel = 2;
 
 ```sql
 SELECT email 
-FROM usuarios 
+FROM user
 WHERE email LIKE '%@gmail.com';
 ```
 </details>
@@ -202,7 +202,7 @@ WHERE email LIKE '%@gmail.com';
 
 ```sql
 SELECT nombre, telefono 
-FROM usuarios 
+FROM user
 WHERE marca IN ('LG', 'SAMSUNG', 'MOTOROLA');
 ```
 </details>
@@ -213,7 +213,7 @@ WHERE marca IN ('LG', 'SAMSUNG', 'MOTOROLA');
 
 ```sql
 SELECT marca, COUNT(*) 
-FROM usuarios 
+FROM user
 GROUP BY marca;
 ```
 </details>
@@ -224,7 +224,7 @@ GROUP BY marca;
 
 ```sql
 SELECT nombre, telefono 
-FROM usuarios 
+FROM user
 WHERE marca <> 'LG';
 ```
 </details>
@@ -235,7 +235,7 @@ WHERE marca <> 'LG';
 
 ```sql
 SELECT DISTINCT compania 
-FROM usuarios 
+FROM user
 ORDER BY compania ASC;
 ```
 </details>
@@ -246,7 +246,7 @@ ORDER BY compania ASC;
 
 ```sql
 SELECT SUM(saldo) 
-FROM usuarios 
+FROM user
 WHERE compania = 'UNEFON';
 ```
 </details>
@@ -257,7 +257,7 @@ WHERE compania = 'UNEFON';
 
 ```sql
 SELECT email 
-FROM usuarios 
+FROM user
 WHERE email LIKE '%@hotmail.com';
 ```
 </details>
@@ -268,18 +268,18 @@ WHERE email LIKE '%@hotmail.com';
 
 ```sql
 SELECT nombre 
-FROM usuarios 
+FROM user
 WHERE saldo = 0 OR activo = 0;
 ```
 </details>
 
-##### Ejericio 19. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o TELCEL
+##### Ejericio 19. Listar el username y teléfono de los usuarios con compañía telefónica IUSACELL o TELCEL
 <details>
 <summary>Solución</summary>
 
 ```sql
 SELECT usuario, telefono 
-FROM usuarios 
+FROM user
 WHERE compania IN ('IUSACELL', 'TELCEL');
 ```
 </details>
@@ -290,7 +290,7 @@ WHERE compania IN ('IUSACELL', 'TELCEL');
 
 ```sql
 SELECT DISTINCT marca 
-FROM usuarios 
+FROM user
 ORDER BY marca ASC;
 ```
 </details>
@@ -301,18 +301,18 @@ ORDER BY marca ASC;
 
 ```sql
 SELECT DISTINCT marca 
-FROM usuarios 
+FROM user
 ORDER BY RAND();
 ```
 </details>
 
-##### Ejercicio 22. Listar el login y teléfono de los usuarios con compañía telefónica IUSACELL o UNEFON
+##### Ejercicio 22. Listar el username y teléfono de los usuarios con compañía telefónica IUSACELL o UNEFON
 <details>
 <summary>Solución</summary>
 
 ```sql
 SELECT usuario, telefono 
-FROM usuarios 
+FROM user
 WHERE compania IN ('IUSACELL', 'UNEFON');
 ```
 </details>
@@ -323,7 +323,7 @@ WHERE compania IN ('IUSACELL', 'UNEFON');
 
 ```sql
 SELECT nombre, telefono 
-FROM usuarios 
+FROM user
 WHERE marca NOT IN ('MOTOROLA', 'NOKIA');
 ```
 </details>
@@ -334,7 +334,7 @@ WHERE marca NOT IN ('MOTOROLA', 'NOKIA');
 
 ```sql
 SELECT SUM(saldo) 
-FROM usuarios 
+FROM user
 WHERE compania = 'TELCEL';
 ```
 </details>
