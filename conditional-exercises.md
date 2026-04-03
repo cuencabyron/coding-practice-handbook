@@ -336,12 +336,32 @@ print("Interes:", interes)
 ```
 </details>
 
-##### Ejericicio 6. En un almacén se hace un 5% de descuento a los clientes cuya compra supere los $6,000.00 on un 10% si la compra supera los $8,000.00 ¿Cuál será la cantidad que pagara una persona por su compra y cuál es su descuento?
+##### Ejericicio 6. En un almacén se hace un 5% de descuento a los clientes cuya compra supere los $6,000.00 son un 10% si la compra supera los $8,000.00 ¿Cuál será la cantidad que pagara una persona por su compra y cuál es su descuento?
 <details>
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo DescuentoAlmacen
+    Definir compra, descuento, total Como Real;
 
+    Escribir "Ingrese monto de compra: ";
+    Leer compra;
+
+    Si compra > 8000 Entonces
+        descuento <- compra * 0.10;
+    SiNo
+        Si compra > 6000 Entonces
+            descuento <- compra * 0.05;
+        SiNo
+            descuento <- 0;
+        FinSi
+    FinSi
+
+    total <- compra - descuento;
+
+    Escribir "Descuento: ", descuento;
+    Escribir "Total a pagar: ", total;
+FinAlgoritmo
 ```
 </details>
 
@@ -349,7 +369,29 @@ print("Interes:", interes)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    float compra, descuento, total;
+
+    cout << "Monto de compra: ";
+    cin >> compra;
+
+    if(compra > 8000)
+        descuento = compra * 0.10;
+    else if(compra > 6000)
+        descuento = compra * 0.05;
+    else
+        descuento = 0;
+
+    total = compra - descuento;
+
+    cout << "Descuento: $" << descuento << endl;
+    cout << "Total a pagar: $" << total;
+
+    return 0;
+}
 ```
 </details>
 
@@ -357,7 +399,19 @@ print("Interes:", interes)
 <summary>Python</summary>
 
 ```Python
+compra = float(input("Monto de compra: "))
 
+if compra > 8000:
+    descuento = compra * 0.10
+elif compra > 6000:
+    descuento = compra * 0.05
+else:
+    descuento = 0
+
+total = compra - descuento
+
+print("Descuento:", descuento)
+print("Total a pagar:", total)
 ```
 </details>
 
@@ -564,7 +618,20 @@ print("Total a pagar:", total - descuento)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Llantas
+    Definir cantidad, total Como Real;
 
+    Escribir "Cantidad de llantas: ";
+    Leer cantidad;
+
+    Si cantidad < 5 Entonces
+        total <- cantidad * 800;
+    SiNo
+        total <- cantidad * 700;
+    FinSi
+
+    Escribir "Total a pagar: ", total;
+FinAlgoritmo
 ```
 </details>
 
@@ -572,7 +639,25 @@ print("Total a pagar:", total - descuento)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int cantidad;
+    float total;
+
+    cout << "Cantidad de llantas: ";
+    cin >> cantidad;
+
+    if(cantidad < 5)
+        total = cantidad * 800;
+    else
+        total = cantidad * 700;
+
+    cout << "Total a pagar: $" << total;
+
+    return 0;
+}
 ```
 </details>
 
@@ -580,7 +665,14 @@ print("Total a pagar:", total - descuento)
 <summary>Python</summary>
 
 ```Python
+cantidad = int(input("Cantidad de llantas: "))
 
+if cantidad < 5:
+    total = cantidad * 800
+else:
+    total = cantidad * 700
+
+print("Total a pagar:", total)
 ```
 </details>
 
@@ -1379,7 +1471,20 @@ print("Total a pagar:", precio - descuento)
 <summary>Pseudocódigo</summary>
 
 ```
+Algoritmo Sillas
+    Definir cantidad, total Como Real;
 
+    Escribir "Cantidad de sillas: ";
+    Leer cantidad;
+
+    Si cantidad > 10 Entonces
+        total <- cantidad * 200;
+    SiNo
+        total <- cantidad * 300;
+    FinSi
+
+    Escribir "Total a pagar: ", total;
+FinAlgoritmo
 ```
 </details>
 
@@ -1387,7 +1492,25 @@ print("Total a pagar:", precio - descuento)
 <summary>C++</summary>
 
 ```C++
+#include<iostream>
+using namespace std;
 
+int main() {
+    int cantidad;
+    float total;
+
+    cout << "Cantidad de sillas: ";
+    cin >> cantidad;
+
+    if(cantidad > 10)
+        total = cantidad * 200;
+    else
+        total = cantidad * 300;
+
+    cout << "Total a pagar: $" << total;
+
+    return 0;
+}
 ```
 </details>
 
@@ -1395,7 +1518,14 @@ print("Total a pagar:", precio - descuento)
 <summary>Python</summary>
 
 ```Python
+cantidad = int(input("Cantidad de sillas: "))
 
+if cantidad > 10:
+    total = cantidad * 200
+else:
+    total = cantidad * 300
+
+print("Total a pagar:", total)
 ```
 </details>
 

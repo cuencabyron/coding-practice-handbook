@@ -47,7 +47,7 @@ CREATE TABLE articulo (
     articulo_id INT           NOT NULL,
     nombre VARCHAR(30)        NOT NULL,
     precio DECIMAL(10,2)      NOT NULL,
-    PRIMARY KEY (articulo_id)
+    PRIMARY KEY (articulo_id),
     CONSTRAINT fk_articulo_fabricante
         FOREIGN KEY (fabricante_id) REFERENCES fabricante(fabricante_id)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
